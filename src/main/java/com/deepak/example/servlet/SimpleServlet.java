@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by dsha51 on 5/20/2016.
  */
-@WebServlet("/simple")
+@WebServlet(urlPatterns = {"/simple","/test-servlet"})
 public class SimpleServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -23,7 +23,7 @@ public class SimpleServlet extends HttpServlet {
         PrintWriter out=response.getWriter();
 
         out.print("<html><body>");
-        out.print("<h3>Hello! Somebody told me that I am a servlet!</h3>");
+        out.print("<h3>Hello! Somebody told me that I am a Simple but test-servlet!</h3>");
         out.print("</body></html>");
     }
 }
